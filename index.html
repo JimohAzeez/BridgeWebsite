@@ -1,0 +1,205 @@
+<!Doctype html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <link type="text/cs" href="main.cs">
+  </link>
+  <script src="main.js"></script>
+
+  <title>
+    BridgeLeg Tech
+  </title>
+  <link rel="stylesheet" href="main.css">
+  <scrip></scrip>
+</head>
+
+
+<body>
+
+  <header class="Header-Pane" id = "myHeader">
+    <div class="logoDiv">
+      <div><img onload="WindowDonLoad()" src="img/paper-plane-solid-24 (1).png" style="width:24px; height: 24px;">
+      </div>
+      <div class="forName">
+        <h2>BridgeLeg</h2>
+      </div>
+    </div>
+    <nav>
+      <ul>
+        <li><a>Innovation</a></li>
+        <li><a>Finance</a></li>
+        <li><a>AI</a></li>
+        <li><a>Education</a></li>
+      </ul>
+      <box-icon name='menu' size="md" id="Boxmenu"></box-icon>
+    </nav>
+
+  </header>
+
+  <!-- <section id="ForGaming"> -->
+
+  <!-- </section> -->
+
+
+  <section id="dashbord-canvas">
+
+    <div class="welcome-Pane">
+
+
+
+      <div class="welcome-msg">
+        <div class="the-message">
+          <h2><br><br> Hello World !!!<br><br> Welcome !!! </h2>
+          <p style="padding-left: 5px; font-family: Arial, 
+          Helvetica, sans-serif; font-size: 24px;">
+            Let's bridge the
+            gaps together ...</p>
+
+          <p id="Consolee"></p>
+
+          <div class="subscribers">
+            Join the team
+            <form>
+              <input type="text" placeholder="Your Name">
+              <input type="text" placeholder="Your email address">
+              <button onclick="joinTeam()" style="margin-top: 5px; width: 70px; background-color: skyblue;">Join Us</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="forJoyStick">
+          <button onclick="gameJoyStick()" id="QuickGame"
+            style="padding: 2px; cursor: pointer;
+            font-size: 10px; font-weight: bold; border: 2px solid rgb(143, 108, 63); border-radius:25%; background-color: antiquewhite; opacity:1; text-align: center; line-height: 34px;">
+            Fast Game<br>
+            <img style="width:40px; height:24px; object-fit: cover;" src="img/joystick-solid-24.png"
+              alt="JoyStick"></button>
+        </div>
+      </div>
+
+      <!-- for the display pane on the Home-->
+      <div class="welcome-display" id="WelcDisp"><canvas id="DisplayCanvas"></canvas>
+        <p
+          style="font-size: 50px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; text-align: center; color:gold ">
+
+          ... </p>
+      </div>
+    </div>
+    <!-- end of display pane on the Home-->
+
+    <!-- for the introduction pane on the Home-->
+    <div class="Wedo">Tech appreciation in harnessing the potentials benefits of Education, finance, A.I, Agriculture,
+      Production, Transpostation, Housing, Services e.t.c</p>
+    </div>
+    <!-- end of the introduction pane on the Home-->
+
+  </section>
+
+  <section class="doingsPane">
+    <div class="row">
+      <div>
+        Innovation
+        <a href="Innovation-Prod.html"><img src="img/1920px-Eko_cater_bridge_in_Lagos_State-Nigeria.jpg"
+            alt="Eko Bridge"></a>
+      </div>
+      <div>Education <img src="img/vecteezy_education-is-the-way-to-success-3d-render-illustration_8176789_710.jpg"
+          alt="Education Pane"></div>
+      <div>Finance <img src="img/tree-grows-coin-glass-jar-with-copy-space.jpg" alt="Finance Pane"></div>
+      <div>A.I <img src="img/AI.jpg" alt="AI Pane"></div>
+    </div>
+    <div class="row">
+      <div>Agriculture <img src="img/colorful-tomatoes-vegetables-fruits-are-growing-indoor-farm-vertical-farm.jpg"
+          alt="Agriculture Pane"></div>
+      <div>Factory <img src="img/Tall Business Building.jpg" alt="Factory Pane"></div>
+      <div>Trasportation <img src="img/supply-chain-representation-still-life.jpg" alt="Transpotation Pane"></div>
+      <div>Housing <img src="img/Housing JPG.JPG" alt="Housing Pane"></div>
+    </div>
+  </section>
+
+  <section class="footer-Pane">
+    <footer class="footer" style="background-color: skyblue;">
+
+      <div>
+        <nav>
+          <ul>
+            <li class="theHead">Company</li>
+            <li><a>About</a></li>
+            <li><a>Contacts</a></li>
+            <li><a>Career</a></li>
+          </ul>
+        </nav>
+      </div>
+
+
+      <div>
+        <nav>
+          <ul>
+            <li class="theHead">Design Services</li>
+            <li><a>Web Designing</a></li>
+            <li><a>Software Designing</a></li>
+            <li><a>Graphic Designs</a></li>
+          </ul>
+        </nav>
+      </div>
+
+
+      <div>
+        <nav>
+          <ul>
+            <li class="theHead">Analyses Services</li>
+            <li><a>Researh Analyses and Interpretation</a></li>
+            <li><a>Business Data Analyses and Reporting</a></li>
+            <li><a>Operational and technical Analyses</a></li>
+          </ul>
+        </nav>
+      </div>
+
+
+      <div>
+        <nav>
+          <ul>
+            <li class="theHead">Resources</li>
+            <li><a>Softwares</a></li>
+            <li><a>Educational</a></li>
+            <li><a>Social</a></li>
+          </ul>
+        </nav>
+      </div>
+
+
+
+    </footer>
+  </section>
+
+  <!--For Game Popup Pane-->
+  <section id="ForGamePopUpPane">
+    <div class="ForGaming" id="ForGaming">
+
+      <header> <button id="ToHome"><img src="img/arrow-back-regular-24.png" style="width: 50px; height: 24px;">
+        </button> <input type="text" placeholder="Player's Name"> <input type="text" placeholder="Score"></header>
+      <div id="MainGamePane">
+        <div id="GameTypes">
+          <div>Boya Loma Dele</div>
+          <div>Catcher Catcher</div>
+          <div>Isan salubo</div>
+        </div>
+        <div id="GameCanvas"> <Canvas></Canvas> </div>
+
+      </div>
+    </div>
+  </section>
+
+
+
+  <img class="hand" src="businessman.jpg">
+  <img class="hand" src='colorful-tomatoes.jpg'>
+  <img class="hand" src='Workers Discussing.jpg'>
+
+  <script src="main.js"></script>
+  <script src="main2.js"></script>
+  <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+</body>
+
+</html>
