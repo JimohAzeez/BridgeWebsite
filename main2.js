@@ -1,10 +1,10 @@
 // @ts-check 
 
-var Screen = document.getElementById("DisplayCanvas");
+var SScreen = document.getElementById("DisplayCanvas");
 
-const ctx = Screen.getContext('2d');
-const CANVAS_WIDTH = Screen.width = 400;
-const CANVAS_HEIGHT = Screen.height = 465;
+const ctx = SScreen.getContext('2d');
+const CANVAS_WIDTH = SScreen.width = 400;
+const CANVAS_HEIGHT = SScreen.height = 465;
 const theImage = new Image();
 
 var OurImage1 = new Image();
