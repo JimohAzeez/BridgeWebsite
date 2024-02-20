@@ -2,7 +2,7 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
-  font-family: Arial, 'Adagio sans', Calibri, Collaborate, 'Deja vu', Gandi, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: 'Adagio sans', 'Deja vu', Gandi, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-size: 15px;
 }
 
@@ -197,12 +197,14 @@ nav>box-icon {
 }
 
 .welcome-msg {
+  font-family:monospace;
   font-size: 3.0em;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-between;
-  width: 60%
+  width: 60%;
+  
 }
 
 input[type=Submit] {

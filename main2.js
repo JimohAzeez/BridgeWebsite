@@ -1,9 +1,15 @@
 // @ts-check 
-
 var Screen = document.getElementById("DisplayCanvas");
 
+alert("got hereeeeeee");
+
+import {StopDisplay} from "./main.js";
+
+
 const ctx = Screen.getContext('2d');
+
 const CANVAS_WIDTH = Screen.width = 400;
+
 const CANVAS_HEIGHT = Screen.height = 465;
 const theImage = new Image();
 
@@ -147,9 +153,14 @@ function animate() {
 
     // to take time and ensure that the display is slower
     slower++;
+    // alert("This is what stopDisplay is " + StopDisplay);
 
+   // if (StopDisplay == 0) {
     //to reloop the pane
     requestAnimationFrame(animate);
+    
+//}else { alert("This is what stopDisplay is " + StopDisplay) }
 //alert("ends ==> ");
 }
+
 animate();
