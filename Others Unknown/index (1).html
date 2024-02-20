@@ -1,0 +1,169 @@
+<!Doctype html>
+<html lang ="en">
+<head>
+
+<meta charset = "utf-8">
+<link type = "text/cs" href = "main.cs"></link>
+<script src= "main.js"></script>
+
+<title> 
+BridgeLeg Tech
+</title>
+
+<style type="text/css">
+
+* {
+margin: 0px;
+padding: 0px;
+box-sizing: border-box;
+  }
+
+#UpPane {
+width: 100%;
+min-height : 40px;
+margin: 10px;
+text-align : center;
+line-height : 40px;
+background-color: blue; }
+
+
+#FirstParentPane {
+
+}
+
+#LongPane {
+width: 10%;
+min-height : 800px;
+text-align : center;
+line-height : 800px;
+background-color: blue;
+float: left;
+margin-right : 5px; }
+
+
+#SecondParentPane{
+width : 35%;
+min-height : 710px;
+float:left;
+background-color: green;
+}
+
+#Child1-1{
+width : 100%;
+min-height : 310px;
+background-color: blue;
+text-align : center;
+line-height : 310px;
+}
+
+#Child1-2{
+width : 100%;
+min-height : 390px;
+background-color: blue;
+text-align : center;
+line-height : 390px;
+margin-top:5px;
+}
+
+
+
+
+
+
+
+#Second2ParentPane{
+width : 55%;
+min-height : 710px;
+float:left;
+background-color: green;
+}
+
+#Child2-1{
+width : 55%;
+min-height : 700px;
+background-color: blue;
+text-align : center;
+line-height : 310px;
+float:right;
+}
+
+#Child2-2{
+width : 100%;
+min-height : 10px;
+background-color: blue;
+text-align : center;
+line-height : 390px;
+margin-top:5px;
+}
+
+
+
+.clearfix::after {
+content: "";
+display: block;
+clear: both;
+ } 
+ 
+.ForSpace {
+margin-bottom: 5px;
+margin-left: 5px
+ }
+
+	</style>
+
+</head>   
+
+
+
+
+
+
+
+
+<body>
+
+<div id = "UpPane" class = "ForSpace">
+Up pane</div>
+
+
+
+
+<div id = "MainParentPane" class : "clearfix"> <!-- for the entire gridlock -->
+
+<div id = "FirstParentPane" class = "clearfix">
+
+<div id = "LongPane" class = "ForSpace">
+Long pane</div>
+
+<div id = "SecondParentPane" class = "clearfix">
+
+<div id = "Child1-1">
+Child 1 1 Pane 
+</div>
+<div id ="Child1-2">
+Child 1 2 Pane
+</div>
+
+
+</div>
+
+
+<!-- hnkjlfnj -->
+
+<div id = "Second2ParentPane" class = "clearfix">
+
+<div id = "Child2-1">
+Child 2 1 Pane 
+</div>
+<div id ="Child2-2">
+Child 2 2 Pane
+</div>
+
+
+</div>
+<!-- kjdnfxvjndkj -->
+
+<div> <!-- for MainParentPane-->
+
+</body>
+</html>
