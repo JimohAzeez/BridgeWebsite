@@ -1,11 +1,6 @@
 // @ts-check 
 var Screen = document.getElementById("DisplayCanvas");
 
-alert("got hereeeeeee");
-
-import {StopDisplay} from "./main.js";
-
-
 const ctx = Screen.getContext('2d');
 
 const CANVAS_WIDTH = Screen.width = 400;
@@ -18,12 +13,17 @@ var OurImage2 = new Image();
 var OurImage3 = new Image();
 
 var counter = 1;
-var slower = 0;
+var AllX = 0;
+var slowerLevel = 0;
 var destinationX1 = 0;
 var destinationX2 = CANVAS_WIDTH;
 var destinationX3 = CANVAS_WIDTH * 2;
+var CANVASCOUNTER = 0;
 var allMovedOut = -CANVAS_WIDTH * 2;
 
+AllX= destinationX1+destinationX2+destinationX3;
+
+slowerLevel = 2.0;
 //const hand = document.getElementById("hand");
 var ImageArray = ['businessman.jpg',
     'colorful-tomatoes.jpg',
@@ -33,10 +33,6 @@ var ImageArray = ['businessman.jpg',
 OurImage1.src = ImageArray[0];
 OurImage2.src = ImageArray[1];
 OurImage3.src = ImageArray[2];
-
-
-
-
 
 /*
 function animate() {
@@ -112,55 +108,50 @@ function animate() {
   };
 
 */
-//
 
 ctx.drawImage(OurImage1, destinationX1, 0, 600, 600);
 ctx.drawImage(OurImage2, destinationX2, 0, 600, 600);
 ctx.drawImage(OurImage3, destinationX3, 0, 600, 600);
 
+ctx.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
 
-function animate() {
-
-    //alert("The src is " + (600 - destinationX1));
-
-    //for moving the images. While the image is on motion i.e the animation frame,
-    //if (slower % 10 == 0) {
-
-        //to clear the pane and show another Image in another position changed by destination x 
-        ctx.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
-
-        //to Move the images, 2 Images at a time.
-        //ctx.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
-        ctx.drawImage(OurImage1, destinationX1, 0, 600, 600);
-        ctx.drawImage(OurImage2, destinationX2, 0, 600, 600);
-        ctx.drawImage(OurImage3, destinationX3, 0, 600, 600);
-
-        destinationX1--;
-        destinationX2--;
-        destinationX3--;
-
-        //to change Image when the visible image has moved to the end of the pane.
-        if (destinationX1 <= allMovedOut) {
-            //alert("ends ==> "+destinationX1);
-            destinationX1 = 600;
-        } else if (destinationX2 <= allMovedOut) {
-            destinationX2 = 600;
-        } else if (destinationX3 <= allMovedOut) {
-            destinationX3 = 600;
+//const sleep = (delay) => new Promise((resolve) => setTimeout(resolve, delay));
+function Delay (value) { //alert ("Here Nau1");
+            setInterval(() => {
+                alert ("Here Nau1");
+            }, value);
         }
 
-    //}
+function animate() {
+        
+        ctx.drawImage(OurImage1, destinationX1, 0, 400, 600);
+        ctx.drawImage(OurImage2, destinationX2, 0, 400, 600);
+        ctx.drawImage(OurImage3, destinationX3, 0, 400, 600);
 
-    // to take time and ensure that the display is slower
-    slower++;
-    // alert("This is what stopDisplay is " + StopDisplay);
+        destinationX1=destinationX1-slowerLevel;
+        destinationX2=destinationX2-slowerLevel;
+        destinationX3=destinationX3-slowerLevel;
+        CANVASCOUNTER=CANVASCOUNTER+slowerLevel;
+        //alert("Yes, the canvas Width => "+CANVAS_WIDTH+ " While the  destination is ==> "+destinationX1);
+        if (CANVASCOUNTER==CANVAS_WIDTH){
+            //alert("Yes, the canvas Width => "+CANVAS_WIDTH+ " While the  destination is ==> "+destinationX1);
+            Delay(5000);
+            CANVASCOUNTER=0;
 
-   // if (StopDisplay == 0) {
-    //to reloop the pane
+        }
+
+
+        if (destinationX1 <= allMovedOut) {
+            destinationX1 = 400;
+        } else if (destinationX2 <= allMovedOut) {
+            destinationX2 = 400;
+        } else if (destinationX3 <= allMovedOut) {
+            destinationX3 = 400;
+        }
+
     requestAnimationFrame(animate);
-    
-//}else { alert("This is what stopDisplay is " + StopDisplay) }
-//alert("ends ==> ");
+
 }
+
 
 animate();

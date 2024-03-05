@@ -1,11 +1,11 @@
-export var StopDisplay = 0;
+//export var StopDisplay = 0;
 
- alert("This is what stopDisplay is " + StopDisplay);
+ //alert("This is what stopDisplay is " + StopDisplay);
 
 /* Exiting the Game pane. */
 document.getElementById("ToHome").addEventListener('click', () => {
   document.getElementById("ForGaming").classList.remove('showPaneGame');
-  StopDisplay = 0;
+  //StopDisplay = 0;
 })
 
 
@@ -15,7 +15,7 @@ function gameJoyStick() {
   let GPane = document.getElementById('ForGaming');
   GPane.classList.add('showPaneGame');
 
-  StopDisplay = 1;
+  //StopDisplay = 1;
 
 }
 

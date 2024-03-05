@@ -186,10 +186,10 @@ nav>box-icon {
 
 .welcome-Pane {
   width: 100%;
-  background-color: white;/*rgba(223, 41, 9, 0.2);*/
-  /*background-image: url(img/driving-the-evolution-of-agriculture.jpg);*/
+  /*background-color: white;/*rgba(223, 41, 9, 0.2);
+  background-image: url("Backgroud Pics.png");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover;*/
   display: flex;
   justify-content: space-between;
   padding: 2px;
@@ -205,6 +205,33 @@ nav>box-icon {
   justify-content: space-between;
   width: 60%;
   
+}
+.MotivationPane{
+  margin: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  height: 500px;
+  background-color: antiquewhite;
+  /*background-image: url("Backgroud Pics.png");
+  opacity: 0.65;*/
+  border: 1px solid #212221;
+  overflow:scroll; 
+}
+
+
+#MotivationPaneid{
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 60%;
+  align-items:stretch;
+  opacity: 0.95;
+  border: 1px solid #282b28;
+  background-color: rgb(155, 71, 65);
+  border-radius: 5px;
 }
 
 input[type=Submit] {
@@ -269,11 +296,11 @@ td {
   border: 2px solid lightgrey;
   width: 40%;
   min-height: 100vh;
-  background-color: linear-gradient(rgba(185, 17, 26, 0.2), rgba(0, 0, 9, 0.2));
+  /*background-color: linear-gradient(rgba(185, 17, 26, 0.2), rgba(0, 0, 9, 0.2));
   background-image: url(img/vecteezy_businessman-hand-working-with-finances-about-cost-and__23.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  opacity: 0.65;
+  opacity: 0.65;*/
   border-radius: 6px;
 
 }
@@ -286,7 +313,7 @@ background-image: none;
 #DisplayCanvas {
   width: 100%;
   min-height: 100%;
-  background-color: aliceblue;
+  /*background-color: aliceblue;*/
 }
 
 #JoyStickId:hover {
@@ -351,7 +378,7 @@ background-image: none;
 }
 
 img {
-  /*border: 1px solid #ddd;*/
+  border: 1px solid #ddd;
   border-radius: 4px;
   padding: 5px;
   width: 100%;
@@ -361,7 +388,7 @@ img {
 
 
 /*Section for Mobile view*/
-@media only screen and (max-width:786px) {
+@media screen and (max-width:786px) {
   nav {
     flex-direction: column;
     position: relative;
